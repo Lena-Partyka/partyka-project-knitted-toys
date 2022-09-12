@@ -1,56 +1,59 @@
 * {
-	box-sizing: border-box;
+		box-sizing: border-box;
 }
 body {
-	color: #757679;
-	font-family: "Avenir Next", sans-serif;
-	font-style: normal;
-	font-weight: 400;
+		margin: 0;
+		color: #757679;
+		font-family: "Avenir Next", sans-serif;
+		font-style: normal;
+		font-weight: 400;
 }
 .main-header {
-	position: fixed;
-	z-index: 1;
-	top: 0;
-	left: 0;
-	display: flex;
-	flex-flow: column wrap;
-	align-items: center;
-	justify-content: space-between;
-	width: 100%;
-	background: white;
-	box-shadow: 0 5px 7px -5px #201A19;
+		position: fixed;
+		z-index: 100;
+		top: 0;
+		left: 0;
+		display: flex;
+		flex-flow: column nowrap;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+		padding: 0.5rem 1rem;
+		background: white;
+		box-shadow: 0 5px 7px -5px #201A19;
 }
 #product-overview {
-	min-height: calc(100vh - 3.5rem - 8rem);
-	margin-top: 9rem;
+		min-height: calc(100vh - 3.5rem - 8rem);
+		margin-top: 9rem;
+		background: url("images/main_page.jpg") left 10% bottom 70%/cover no-repeat border-box, #90D3F9;
 }
 .main-header > div {
-	display: inline-block;
-	vertical-align: middle;
+		display: inline-block;
+		vertical-align: middle;
 }
 .main-logo {
-	height: 6.5rem;/*?*/
-	display: inline-block;
-	vertical-align: middle;
+		height: 6.5rem;/*?*/
+		display: inline-block;
+		vertical-align: middle;
 }
 .main-logo img {
-	height: 100%;
+		height: 100%;
 }
 .mobile-logo {
-	display: none;
+		display: none;
 }
 .main-nav {
-	display: inline-block;
-	text-align: center;
-	width: calc(100% - 74px);
-	padding: 0.9rem 1.5rem;
-	vertical-align: middle;
+		display: inline-block;
+		text-align: center;
+		width: calc(100% - 74px);
+		padding: 0.9rem 1.5rem;
+		vertical-align: middle;
 }
 .mobile-nav {
-	display: none;
+		display: none;
 }
 @media (max-width: 48rem), (orientation: portrait) {
-	.main-nav {
+		.main-nav {
 		display: none;
 	}
 	.mobile-nav {
@@ -70,74 +73,111 @@ body {
 		display: inline-block;
 		text-align: center;
 		height: 7rem;/*?*/
-
-	}
-	img {
-		width: 70%;
 	}
 }
 .main-nav__items {
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: space-evenly;
-	align-items: center;
-	margin: 0;
-	padding: 0;
-	list-style: none;
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: space-evenly;
+		align-items: center;
+		margin: 0;
+		padding: 0;
+		list-style: none;
 }
 .mobile-nav__items {
-	list-style: none;
+		list-style: none;
 }
 .main-nav__item {
-	display: inline-block;
-	margin: 0 1rem;
+		display: inline-block;
+		margin: 0 1rem;
 }
 .main-nav__item a,
 .mobile-nav__item a {
-	text-decoration: none;
-	color: #89898c;
-	padding: 0.2rem 0;
+		text-decoration: none;
+		color: #89898c;
+		padding: 0.2rem 0;
 }
 .main-nav__item a:hover,
 .main-nav__item a:active,
 .mobile-nav__item a:hover,
 .mobile-nav__item a:active {
-	color: #d8d8dc;
-	/*border-bottom: 0.2rem solid #d8d8dc;*/
+		color: #d8d8dc;
+		/*border-bottom: 0.2rem solid #d8d8dc;*/
+}
+main {
+		margin-top: 1rem;
+}
+#popular-toys {
+		margin: 1rem;
+		width: 100%;
+}
+#popular-toys h1 {
+		text-align: center;
+		font-size: 1rem;
 }
 .main-footer {
-	background: #a6a6a9;
-	padding: 2rem;
+		background: #a6a6a9;
+		padding: 2rem;
 }
 .main-footer__links {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-	text-align: center;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		text-align: center;
 }
 .main-footer__link {
-	display: inline-block;
-	margin: 0 1rem;
+		display: inline-block;
+		margin: 0 1rem;
 }
 .main-footer__link a {
-	color: white;
-	text-decoration: none;
+		color: white;
+		text-decoration: none;
 }
 .main-footer__link a:hover,
 .main-footer__link a:active {
-	color: #201A19;
+		color: #363535;
+}
+#product-overview h1 {
+		color: white;
+		position: absolute;
+		bottom: 5%;
+		left: 3%;
+		font-size: 3rem;
+}
+@media (max-width: 48rem) {
+		#product-overview h1 {
+				font-size: 1.5rem;
+		}
+}
+article {
+		display: flex;
+		align-content: center;
+		margin: 2rem auto;
+		max-width: 1500px;
+		justify-content: space-around;
+}
+.popular-toys_image-container {
+		width: 50%;
+}
+.popular-toys_image-container img {
+		width: 100%;
+		vertical-align: top;
+		box-shadow: rgba(158, 171, 179, 0.73) 0px 0px 11px 1px;
+
+}
+.popular-toys_info {
+		width: 40%;
+		padding: 1rem;
+		text-align: justify;
+		vertical-align: middle;
+}
+@media (max-width: 48rem) {
+		article {
+				font-size: 1rem;
+		}
 }
 
-#product-overview h1 {
-	color: white;
-	position: absolute;
-	bottom: 5%;
-	left: 3%;
-}
-.product-overview {
-	width: 100%;
-	height: 100%;
-}
+
 
 
 
