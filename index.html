@@ -5,10 +5,19 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>KimulechkaKnits</title>
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="shared.css">
+	<link rel="stylesheet" href="main.css">
 </head>
+
 <body>
-	<!--logo + nav-->
+	<div class="backdrop"></div>
+	<div class="modal">
+		<h1 class="modal__title">Вы хотите заказать себе вязанного друга?</h1>
+		<div class="modal__actions">
+			<a href="ordering_page/index.html" class="modal__action">Да!</a>
+			<button class="modal__action modal__action--negative" type="button">Нет!</button>
+		</div>
+	</div>
 	<header class="main-header">
 		<div>
 			<a href="index.html" class="main-logo">
@@ -18,36 +27,30 @@
 				<img src="images/logosmall.png" alt="Kimulechka Creation">
 			</a>
 		</div>
+		<div>
+			<button class="toggle-button">
+				<span class="toggle-button__bar"></span>
+				<span class="toggle-button__bar"></span>
+				<span class="toggle-button__bar"></span>
+			</button>
+		</div>
 		<nav class="main-nav">
 			<ul class="main-nav__items">
-				<li class="main-nav__item main-nav__item--cta">
-					<a href="./ordering_page/index.html">Заказать</a>
-					<!--<ul class="main-nav__subitem">
-						<li><a href="#">Игрушки</a></li>
-						<li><a href="#">Погремушки</a></li>
-						<li><a href="#">Одежда для детей</a></li>
-						<li><a href="#">Аксессуары для детей</a></li>
-					</ul>-->
+				<li class="main-nav__item main-nav__item--cta"><a href="#">Заказать</a>
 				</li>
 				<li class="main-nav__item"><a href="#">Видео</a></li>
-				<li class="main-nav__item"><a href="#">Контакты</a></li>
 				<li class="main-nav__item"><a href="#">Обо мне</a></li>
+				<li class="main-nav__item"><a href="#">Контакты</a></li>
 			</ul>
 		</nav>
 		<nav class="mobile-nav">
 			<ul class="mobile-nav__items">
 				<li class="mobile-nav__item mobile-nav__item--cta">
 					<a href="./ordering_page/index.html">Заказать</a>
-					<!--<ul class="main-nav__subitem">
-						<li><a href="#">Игрушки</a></li>
-						<li><a href="#">Погремушки</a></li>
-						<li><a href="#">Одежда для детей</a></li>
-						<li><a href="#">Аксессуары для детей</a></li>
-					</ul>-->
 				</li>
 				<li class="mobile-nav__item"><a href="#">Видео</a></li>
-				<li class="mobile-nav__item"><a href="#">Контакты</a></li>
 				<li class="mobile-nav__item"><a href="#">Обо мне</a></li>
+				<li class="mobile-nav__item"><a href="#">Контакты</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -57,7 +60,7 @@
 		</section>
 		<section id="popular-toys">
 			<h1 class="section-title">Популярные товары и как они создавались...</h1>
-			<div class="popular-toys_overviev">
+			<div class="popular-toys_overviev_main">
 				<article class="popular-toys_leo">
 					<div class="popular-toys_image-container">
 						<a href="#">
@@ -92,6 +95,41 @@
 					</div>
 				</article>
 			</div>
+			<div class="popular-toys_overviev_mobile">
+				<article class="popular-toys_leo">
+					<div class="popular-toys_image-container">
+						<a href="#">
+							<img src="./images/toys/5-лео-1.jpg" alt="Ом Ном">
+						</a>
+					</div>
+					<div class="popular-toys_info">
+						<h1 class="popular-toys_leo_title">Лео</h1>
+						<p class="popular-toys_leo_story">Талисман и игровой персонаж образовательной платформы для изучения языков Lingualeo. Вязала по заказу этой компании для их клиентов. Связать 30 львят за неделю - done!</p>
+					</div>
+				</article>
+				<article class="popular-toys_omnom">
+					<div class="popular-toys_image-container">
+						<a href="#">
+							<img src="./images/toys/1-омном-1.jpg" alt="Ам Ням">
+						</a>
+					</div>
+					<div class="popular-toys_info">
+						<h1 class="popular-toys_omnom_title">Ам Ням</h1>
+						<p class="popular-toys_omnom_story">Поклонникам игры "Cut the Rope". Связала главным любителям этой игры - своим детям.</p>
+					</div>
+				</article>
+				<article class="popular-toys_android">
+					<div class="popular-toys_image-container">
+						<a href="#">
+							<img src="./images/toys/2-андроид-1.jpg" alt="Андроид">
+						</a>
+					</div>
+					<div class="popular-toys_info">
+						<h1 class="popular-toys_android_title">Андроид</h1>
+						<p class="popular-toys_android_story">Не только для малышей, но и для взрослых ценителей андроидов и фанатов роботов. Первый вязанный малыш был подарком для друга android-разработчика.</p>
+					</div>
+				</article>
+			</div>
 		</section>
 	</main>
 	<footer class="main-footer">
@@ -106,6 +144,7 @@
 			</ul>
 		</nav>
 	</footer>
+<script src="shared.js"></script>
 </body>
 
 </html>

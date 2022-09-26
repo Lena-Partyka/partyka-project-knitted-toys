@@ -1,0 +1,159 @@
+#product-overview {
+		position: relative;
+		background: border-box, #90D3F9 url("images/main_page.jpg") border-box left 10% bottom 70%/cover no-repeat border-box;
+		width: 100%;
+		height: 40vh;
+		min-height: calc(100vh - 3rem - 8rem);
+		margin-top: 6rem;
+}
+
+#product-overview h1 {
+		color: white;
+		position: absolute;
+		bottom: 5%;
+		left: 3%;
+		font-size: 3rem;
+}
+
+@media (max-width: 48rem) {
+		#product-overview {
+				height: 40vh;
+				background-position: 10% 70%;
+		}
+		#product-overview h1 {;
+				font-size: 1.5rem;
+		}
+}
+
+.modal {
+		position: fixed;
+		display: none;
+		z-index: 200;
+		top: 20%;
+		left: 30%;
+		width: 40%;
+		background: white;
+		padding: 1rem;
+		border: 1px solid gray;
+		box-shadow: 1px 1px 1px rgba(0, 0, 0, .5);
+}
+
+.modal__title {
+		text-align: center;
+		margin: 0 0 1rem 0;
+}
+
+.modal__actions {
+		text-align: center;
+}
+
+.modal__action {
+		border: 1px solid #24e0b8;
+		background: #24e0b8;
+		text-decoration: none;
+		color: white;
+		font: inherit;
+		padding: .5rem 1rem;
+		cursor: pointer;
+}
+
+.modal__action:hover,
+.modal__action:active {
+		background: #007b00;
+		border-color: #007b00;
+}
+
+.modal__action--negative {
+		background: #ff8b76;
+		border-color: #ff8b76;
+}
+
+.modal__action--negative:hover,
+.modal__action--negative:active {
+		background: #ff3031;
+		border-color: #ff3031;
+}
+
+#popular-toys {
+		margin: 1rem;
+		width: 100%;
+}
+
+#popular-toys h1 {
+		text-align: center;
+		font-size: 3rem;
+}
+
+.popular-toys_overviev_mobile {
+		display: none;
+}
+article {
+		display: flex;
+		align-content: center;
+		align-items: center;
+		margin: 2rem auto;
+		justify-content: space-around;
+}
+
+.popular-toys_image-container {
+		width: 50%;
+}
+
+.popular-toys_image-container img {
+		width: 100%;
+		vertical-align: top;
+		box-shadow: rgba(158, 171, 179, 0.73) 0 0 11px 1px;
+}
+
+.popular-toys_info {
+		width: 50%;
+		padding: 1rem;
+		text-align: justify;
+		vertical-align: middle;
+}
+
+@media (max-width: 48rem) {
+		article {
+				font-size: 1rem;
+		}
+
+		.popular-toys_overviev_main {
+				display: none;
+		}
+
+		.popular-toys_overviev_mobile {
+				margin: 1rem;
+		}
+
+		.popular-toys_overviev_mobile, article {
+				display: flex;
+				flex-flow: column nowrap;
+				align-content: center;
+		}
+
+		#popular-toys h1 {
+				text-align: center;
+				font-size: 2rem;
+		}
+
+		.popular-toys_image-container {
+				width: 100%;
+		}
+
+		.popular-toys_image-container img {
+				width: 100%;
+				vertical-align: top;
+				box-shadow: rgba(158, 171, 179, 0.73) 0 0 11px 1px;
+		}
+
+		.popular-toys_info {
+				font-size: 1.5rem;
+				width: 100%;
+				padding: 1rem;
+				text-align: justify;
+				vertical-align: middle;
+		}
+}
+
+
+
