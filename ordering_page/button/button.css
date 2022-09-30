@@ -19,8 +19,8 @@
 		border: none;
 		border-radius: 0.25em;
 		box-shadow:
-			0 0.25em 0.4em rgba(50, 50, 93, .11),
-			0 0.1em 0.25em rgba(0, 0, 0, .08);
+				0 0.25em 0.4em rgba(50, 50, 93, .11),
+				0 0.1em 0.25em rgba(0, 0, 0, .08);
 		background: var(--button-bg-color);
 		color: var(--button-text-color);
 		font-size: 1rem;
@@ -41,8 +41,8 @@
 .button:hover {
 		color: var(--button-hover-color);
 		box-shadow:
-			0 0.8em 1.8em -0.3em rgba(50, 50, 93, .25),
-			0 0.5em 1em -0.5em rgba(0, 0, 0, .3);
+				0 0.8em 1.8em -0.3em rgba(50, 50, 93, .25),
+				0 0.5em 1em -0.5em rgba(0, 0, 0, .3);
 		transform: translateY(-0.25em);
 }
 
@@ -55,6 +55,12 @@
 .button:focus {
 		outline: 0.15em dotted var(--button-focus-color);
 }
+
+
+
+
+
+
 
 
 

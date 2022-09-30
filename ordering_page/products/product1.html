@@ -1,10 +1,154 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>KimulechkaKnits</title>
+	<link rel="stylesheet" href="../../shared.css">
+	<link rel="stylesheet" href="../../main.css">
+	<link rel="stylesheet" href="products.css">
 </head>
+
 <body>
-$END$
+<div class="backdrop"></div>
+<div class="modal">
+	<h1 class="modal__title">Вы хотите заказать себе вязанного друга?</h1>
+	<div class="modal__actions">
+		<a href="../../ordering_page/index.html" class="modal__action">Да!</a>
+		<button class="modal__action modal__action--negative" type="button">Нет!</button>
+	</div>
+</div>
+<header class="main-header">
+	<div>
+		<a href="../../index.html" class="main-logo">
+			<img src="../../images/logo.png" alt="Kimulechka Creation">
+		</a>
+		<a href="../../index.html" class="mobile-logo">
+			<img src="../../images/logosmall.png" alt="Kimulechka Creation">
+		</a>
+	</div>
+	<div>
+		<button class="toggle-button">
+			<span class="toggle-button__bar"></span>
+			<span class="toggle-button__bar"></span>
+			<span class="toggle-button__bar"></span>
+		</button>
+	</div>
+	<nav class="main-nav">
+		<ul class="main-nav__items">
+			<li class="main-nav__item main-nav__item--cta"><a href="#">Заказать</a>
+			</li>
+			<li class="main-nav__item"><a href="#">Видео</a></li>
+			<li class="main-nav__item"><a href="#">Обо мне</a></li>
+			<li class="main-nav__item"><a href="#">Контакты</a></li>
+		</ul>
+	</nav>
+	<nav class="mobile-nav">
+		<ul class="mobile-nav__items">
+			<li class="mobile-nav__item mobile-nav__item--cta">
+				<a href="../../ordering_page/index.html">Заказать</a>
+			</li>
+			<li class="mobile-nav__item"><a href="#">Видео</a></li>
+			<li class="mobile-nav__item"><a href="#">Обо мне</a></li>
+			<li class="mobile-nav__item"><a href="#">Контакты</a></li>
+		</ul>
+	</nav>
+</header>
+<section class="product-container">
+	<div class="product-gallery">
+		<div class="image-container">
+			<img class="preview" src="../../images/toys/1-омном-1.jpg" alt="">
+			<div class="hover-buttons">
+				<a class="zoom" href="#img-1">zoom image-1</a>
+			</div>
+		</div>
+		<div class="image-container">
+			<img class="preview" src="../../images/toys/1-омном-2.jpg" alt="">
+			<div class="hover-buttons">
+				<a class="zoom" href="#img-2">zoom image-2</a>
+			</div>
+		</div>
+		<div class="image-container">
+			<img class="preview" src="../../images/toys/1-омном-3.jpg" alt="">
+			<div class="hover-buttons">
+				<a class="zoom" href="#img-3">zoom image-3</a>
+			</div>
+		</div>
+
+		<div class="overlay"></div>
+		<div class="popup">
+			<img id="img-1" class="full-image" src="../../images/toys/1-омном-1.jpg" alt="">
+			<img id="img-2" class="full-image" src="../../images/toys/1-омном-2.jpg" alt="">
+			<img id="img-3" class="full-image" src="../../images/toys/1-омном-3.jpg" alt="">
+			<span class="close"></span>
+		</div>
+	</div>
+	<div class="product-details">
+		<div class="product-details__title">
+			<h1>Ом Ном из Cute the Rope</h1>
+		</div>
+		<div class="product-details__pricing">
+			<h1>45$</h1>
+		</div>
+		<div class="product-form">
+			<form class="product-form_input">
+				<input type="text" name="Name" value="Имя*"><br>
+				<input type="email" name="email" value="e-mail*"><br>
+				<input type="text" name="phone" value="Телефон*"></form>
+				<select class="product-quantity">
+					<option value="value1">1</option>
+					<option value="value2">2</option>
+					<option value="value3">3</option>
+					<option value="value4">4</option>
+					<option value="value5">5+</option>
+				</select>
+				<a href="#"><button class="button">Заказать</button></a>
+			</form>
+		</div>
+	</div>
+</section>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script>
+	$(function () {
+    $(".zoom").click(function () {
+      $('.hover-buttons').css("visibility", "hidden");
+      $(".overlay").addClass("active");
+      $(".popup").addClass("active");
+
+      var activImg = $(this).attr("href");
+      $(activImg).fadeIn();
+    });
+
+		$(".close").click(function () {
+      $(".overlay").removeClass("active");
+      $(".popup").removeClass("active");
+      $(".full-image").hide();
+      $(".hover-buttons").css("visibility", "visible");
+    });
+
+		$(document).on("click", ".overlay", function () {
+      $(".overlay").removeClass("active");
+      $(".popup").removeClass("active");
+      $(".full-image").hide();
+      $(".hover-buttons").css("visibility", "visible");
+    });
+
+  })
+</script>
+<footer class="main-footer">
+	<nav>
+		<ul class="main-footer__links">
+			<li class="main-footer__link">
+				<a href="#">Support</a>
+			</li>
+			<li class="main-footer__link">
+				<a href="#">Terms of Use</a>
+			</li>
+		</ul>
+	</nav>
+</footer>
+<script src="../../shared.js"></script>
 </body>
+
 </html>
