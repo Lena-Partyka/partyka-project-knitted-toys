@@ -1,0 +1,15 @@
+body {
+		margin: 0;
+		background: #fff9f9;
+}
+
+.video {
+		display: flex;
+		flex-flow: row wrap;
+		margin-top: 11rem;
+		padding: 3rem 1.5rem 1.5rem 1.5rem;
+}
+
+iframe {
+		margin: 1rem;
+}
