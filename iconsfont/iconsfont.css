@@ -1,0 +1,52 @@
+@font-face {
+  font-family: 'icons';
+  src:  url('../iconsfont/fonts/icons.eot?vucknj');
+  src:  url('../iconsfont/fonts/icons.eot?vucknj#iefix') format('embedded-opentype'),
+    url('../iconsfont/fonts/icons.ttf?vucknj') format('truetype'),
+    url('../iconsfont/fonts/icons.woff?vucknj') format('woff'),
+    url('../iconsfont/fonts/icons.svg?vucknj#icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="_icon-"]::before,
+[class*=" _icon-"]::before {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icons' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+._icon-etsy:before {
+  content: "\e900";
+}
+._icon-instagram:before {
+  content: "\e901";
+}
+._icon-telegram:before {
+  content: "\e902";
+}
+._icon-tiktok:before {
+  content: "\e903";
+}
+._icon-viber:before {
+  content: "\e904";
+}
+._icon-vk:before {
+  content: "\e905";
+}
+._icon-youtube:before {
+  content: "\e906";
+}
+._icon-phone:before {
+  content: "\e907";
+}

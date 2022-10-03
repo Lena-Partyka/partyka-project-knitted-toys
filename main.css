@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;1,400;1,600&display=swap');
 @import "./ordering_page/button/button.css";
 
 :root {
@@ -25,11 +26,12 @@
 }
 
 #product-overview h1 {
-		color: white;
 		position: absolute;
-		bottom: 5%;
+		bottom: 45%;
 		left: 3%;
-		font-size: 3rem;
+		color: var(--dark-grayish-blue);
+		font-family: 'Marck Script', cursive;
+		font-size: 4rem;
 }
 
 @media (max-width: 48rem) {
@@ -38,7 +40,10 @@
 				background-position: 10% 70%;
 		}
 		#product-overview h1 {;
-				font-size: 1.5rem;
+				font-size: 2.5rem;
+				position: absolute;
+				bottom: 2rem;
+				left: 12rem;
 		}
 }
 
@@ -97,41 +102,61 @@
 }
 
 #popular-toys h1 {
-		text-align: center;
+		margin: 0;
+		font-family: 'Marck Script', cursive;
 		font-size: 3rem;
+		text-align: center;
 }
 
 .popular-toys_overviev_mobile {
 		display: none;
 }
-article {
+
+.box-scroll {
 		display: flex;
+		justify-content: center;
 		align-content: center;
 		align-items: center;
-		margin: 2rem auto;
-		justify-content: space-around;
+		width: 95%;
+		height: 400px;
+		margin: 3rem 0;
+		padding: 1.5rem;
+		border-radius: 0;
+		box-shadow: rgba(158, 171, 179, 0.73) 0 0 11px 1px;
+		transform: translateX(400%);
+		transition: transform 0.4s ease;
 }
 
-.popular-toys_image-container {
-		width: 50%;
+.box-scroll:nth-of-type(even) {
+		transform: translateX(-400%);
+}
+
+.box-scroll.show {
+		transform: translateX(0);
 }
 
 .popular-toys_image-container img {
-		width: 100%;
-		vertical-align: top;
+		width: 350px;
+		height: 350px;
+		object-fit: cover;
 		box-shadow: rgba(158, 171, 179, 0.73) 0 0 11px 1px;
 }
 
 .popular-toys_info {
-		width: 50%;
-		padding: 1rem;
-		text-align: justify;
-		vertical-align: middle;
+		display: flex;
+		flex-flow: column wrap;
+		justify-content: center;
+		padding: 0 3rem;
 }
 
 @media (max-width: 48rem) {
-		article {
+		article h1,
+		article p {
 				font-size: 1rem;
+		}
+
+		.box-scroll {
+				margin: 1rem;
 		}
 
 		.popular-toys_overviev_main {
@@ -139,10 +164,10 @@ article {
 		}
 
 		.popular-toys_overviev_mobile {
-				margin: 1rem;
+				margin: .5rem;
 		}
 
-		.popular-toys_overviev_mobile, article {
+		.popular-toys_overviev_mobile {
 				display: flex;
 				flex-flow: column nowrap;
 				align-content: center;
@@ -158,7 +183,6 @@ article {
 		}
 
 		.popular-toys_image-container img {
-				width: 100%;
 				vertical-align: top;
 				box-shadow: rgba(158, 171, 179, 0.73) 0 0 11px 1px;
 		}

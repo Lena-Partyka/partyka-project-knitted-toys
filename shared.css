@@ -1,10 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;1,400;1,600&display=swap');
+
 * {
 		box-sizing: border-box;
 }
 
 body {
 		margin: 0;
-		color: var(--dark-grayish-blue);
+		color: var(--mostly-desaturated-dark-blue);
+		font-size: 1rem;
 		font-family: "Avenir Next", sans-serif;
 		font-style: normal;
 		font-weight: 400;
@@ -43,7 +46,7 @@ main {
 .toggle-button {
 		display: none;
 }
-/*как объединить запросы?*/
+
 @media (max-width: 48rem) {
 		.toggle-button {
 				display: block;
@@ -57,7 +60,7 @@ main {
 		}
 }
 
-@media (min-width: 49rem) and (max-width: 77.5rem) {
+@media (min-width: 48.6rem) and (max-width: 77.5rem) {
 		.toggle-button {
 				display: block;
 				width: 3rem;
@@ -137,16 +140,19 @@ main {
 
 .main-nav__item a,
 .mobile-nav__item a {
-		text-decoration: none;
-		color: var(--dark-grayish-blue);
 		padding: 0.5rem 1rem;
+		color: var(--mostly-desaturated-dark-blue);
+		font-size: 1.1rem;
+		text-decoration: none;
 }
+
 .main-nav__item a:hover,
 .main-nav__item a:active,
 .mobile-nav__item a:hover,
 .mobile-nav__item a:active {
 		color: var(--grayish-light-blue);
 }
+
 @media (max-width: 48rem), (orientation: portrait) {
 		.mobile-nav {
 				display: none;
@@ -215,24 +221,22 @@ main {
 }
 
 .main-footer__links {
-		list-style: none;
 		margin: 0;
 		padding: 0;
 		text-align: center;
 }
 
-.main-footer__link {
-		display: inline-block;
-		margin: 0 1rem;
-}
-
-.main-footer__link a {
+.main-footer__links a {
+		margin: 0;
+		padding: 0 1rem;
 		color: white;
 		text-decoration: none;
+		font-size: 2rem;
 }
 
-.main-footer__link a:hover,
-.main-footer__link a:active {
-		color: #363535;
+.main-footer__links a:hover,
+.main-footer__links a:active {
+		color: var(--strong-cyan);
 }
+
 

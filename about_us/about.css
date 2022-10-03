@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;1,400;1,600&display=swap');
+
+.wrapper {
+		margin-top: 11rem;
+		padding: 3rem 1.5rem 1.5rem 1.5rem;
+}
+
+.aboutme {
+		display: flex;
+		justify-content: center;
+		align-content: center;
+		align-items: center;
+}
+
+.aboutme_info {
+		padding: 1.5rem;
+}
+
+.wrapper h1, h2, h3 {
+		text-align: center;
+}
+
+.wrapper h1 {
+		color: var(--light-orange);
+		font-family: 'Marck Script', cursive;
+		font-size: 2rem;
+}
+
+.wrapper h3 {
+		color: var(--very-light-red);
+		font-family: 'Source Sans Pro', cursive;
+}
+
+.wrapper h2 {
+		color: var(--mostly-desaturated-dark-blue);
+		font-family: 'Source Sans Pro', cursive;
+		font-size: 1.5rem;
+}
+
+.wrapper p {
+		margin: 0 auto;
+}
+
+@media (max-width: 48rem) {
+		.aboutme {
+				display: flex;
+				flex-direction: column;
+				padding: 1rem 0 0;
+		}
+		.wrapper h1 {
+				margin: 0;
+				font-size: 1.5rem;
+		}
+}
+
+.aboutme_private_image-container,
+.testimonial_image-container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-content: center;
+		align-items: center;
+}
+
+.aboutme_image-container img {
+		width: 300px;
+		height: 300px;
+		border-radius: 50%;
+		object-fit: cover;
+		box-shadow: rgba(158, 171, 179, 0.73) 0 0 11px 1px;
+}
+
+.aboutme_private_image-container img {
+		width: 500px;
+		height: 400px;
+		margin: 1rem;
+		border-radius: 4px;
+		object-fit: cover;
+		box-shadow: rgba(158, 171, 179, 0.73) 0 0 11px 1px;
+}
+
+.testimonial_image-container img {
+		width: 18%;
+		margin: 1%;
+		border-radius: 4px;
+		object-fit: contain;
+		box-shadow: rgba(158, 171, 179, 0.73) 0 0 11px 1px;
+}
+
+.wrapper_carousel {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 100vh;
+		margin: 0;
+}
+
+.projects_image-container img {
+		width: 500px;
+		height: 500px;
+		object-fit: cover;
+}
+
+.carousel {
+		overflow: hidden;
+		width: 500px;
+		height: 530px;
+		box-shadow: rgba(158, 171, 179, 0.73) 0 0 11px 1px;
+}
+
+.projects_image-container {
+		display: flex;
+		transform: translateX(0);
+		transition: transrorm 0.5s ease-in-out;
+}
+
+.buttons-container {
+		display: flex;
+		justify-content: space-between;
+}
+
+.btn {
+		background-color: var(--grayish-blue);
+		color: var(--mostly-desaturated-dark-blue);
+		border: none;
+		padding: 0.5rem;
+		cursor: pointer;
+		width: 49.5%;
+}
+
+.btn:hover {
+		opacity: 0.9;
+}
+
+.btn:focus {
+		outline: none;
+}
+
+
+
+
+
+
